@@ -1,0 +1,72 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "JetBrainsMono Nerd Font", "Font Awesome 6 Free", sans-serif;
+    font-size: 13px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: rgba(20, 20, 25, 0.75);
+    color: #e0e0e0;
+    border-radius: 12px;
+    margin: 4px 8px;
+}
+
+tooltip {
+    background: rgba(30, 30, 35, 0.95);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #e0e0e0;
+}
+
+#workspaces button {
+    padding: 0 6px;
+    margin: 2px 2px;
+    background: transparent;
+    color: #a0a0a0;
+    border-radius: 8px;
+    box-shadow: none;
+}
+
+#workspaces button.active {
+    background: #f9e2af;
+    color: #1e1e2e;
+    font-weight: bold;
+}
+
+#workspaces button:hover {
+    background: rgba(249, 226, 175, 0.3);
+    color: #f9e2af;
+}
+
+#custom-power,
+#custom-location,
+#temperature,
+#cpu,
+#memory,
+#disk,
+#battery,
+#clock,
+#idle_inhibitor {
+    padding: 0 8px;
+    margin: 2px 2px;
+    background: transparent;
+    color: #e0e0e0;
+}
+
+#battery.charging {
+    color: #a6e3a1;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: #f38ba8;
+}
+
+#temperature.critical {
+    color: #f38ba8;
+}

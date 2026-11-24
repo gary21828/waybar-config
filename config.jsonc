@@ -1,0 +1,84 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 8,
+    "margin-top": 4,
+    "margin-left": 8,
+    "margin-right": 8,
+    "modules-left": [
+        "niri/workspaces"
+    ],
+    "modules-center": [
+        "custom/location"
+    ],
+    "modules-right": [
+        "idle_inhibitor",
+        "temperature",
+        "cpu",
+        "memory",
+        "disk",
+        "battery",
+        "clock",
+        "custom/power"
+    ],
+    "custom/power": {
+        "format": "󰁥",
+        "on-click": "~/.config/waybar/power-menu.sh",
+        "tooltip-format": "Power menu"
+    },
+    "niri/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "󰡥",
+            "default": "󰡦",
+            "urgent": "󰡤"
+        },
+        "all-outputs": false,
+        "disable-click": false
+    },
+    "custom/location": {
+        "format": "󰚕 Gooee — Marupe",
+        "tooltip": false
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "󰁶",
+            "deactivated": "󰓊"
+        }
+    },
+    "temperature": {
+        "critical-threshold": 80,
+        "format": "{temperatureC}°C 󰔏",
+        "format-critical": "{temperatureC}°C 󰨁"
+    },
+    "cpu": {
+        "format": "{usage}% 󰑛",
+        "interval": 2
+    },
+    "memory": {
+        "format": "{used:0.1f}G 󰺆",
+        "interval": 2
+    },
+    "disk": {
+        "format": "{percentage_used}% 󰃊",
+        "interval": 30
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% 󰂄",
+        "format-plugged": "{capacity}% 󰚥",
+        "format-icons": ["󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"],
+        "tooltip-format": "Time until full: {time}\nCharging rate: {power} W\nHealth: {health}%"
+    },
+    "clock": {
+        "format": "{:%I:%M %p}",
+        "format-alt": "{:%A, %B %d, %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    }
+}
